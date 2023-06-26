@@ -1,0 +1,48 @@
+{{ define "main" }}
+
+  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+
+  <main class="index">
+
+    {{ if .Content }}
+      <article>
+      
+        <header>
+        
+          <h1>{{ .Title | emojify }}</h1>
+          
+          {{ if .Params.cover }}
+            {{ partial "cover" . }}
+          {{ end }}
+          
+        </header>
+        
+        {{ partial "table-of-contents" . }}
+        {{ partial "processed-content" . }}
+        
+      </article>
+    {{ else }}
+
+    <div class="index-body">
+      <a class="title" href="{{ .Site.BaseURL | relLangURL }}">{{ .Site.Title }}</a>
+    
+      {{ if .Site.Menus.main }}
+        {{ with .Site.Menus.main }}
+          <nav aria-label="{{ T "ariaMainMenu" }}">
+            <ul>
+              {{ range . }}
+                <li>
+                  <a class="btn" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+                </li>
+              {{ end }}
+            </ul>
+          </nav>
+    </div>
+      {{ end }}
+    {{ end }}
+      
+    {{ end }}
+
+  </main>
+
+{{ end }}
