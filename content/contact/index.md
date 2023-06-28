@@ -8,12 +8,6 @@ sitemapExclude  : true
 
 That's actually me.
 
-You can also find me at:
+You can find me at:
 
 {{< social >}}
-
----
-
-Or drop me a good ol' email:
-
-{{< contact-form >}}
