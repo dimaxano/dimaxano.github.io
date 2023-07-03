@@ -1,12 +1,12 @@
 ---
-title           : "Contact"
+title           : ""
 description     : "See how to contact me."
-cover           : "javier-mazzeo-GTXvpZ2eTdA.jpg"
-coverAlt        : "Brown animal hanging on tree by Javier Mazzeo."
+cover           : "me.jpg"
+coverAlt        : "Dmitry hanging out with robots"
 sitemapExclude  : true
 ---
 
-That's actually me.
+That's serious me hanging out with some cutie robots 🤖
 
 You can find me at:
 
